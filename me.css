@@ -103,6 +103,7 @@ button{
   overflow:hidden;
   transition:all 0.1s cubic-bezier(0.25,1,0.5,1);
   animation:float 3s ease-in-out infinite;
+  -webkit-tap-highlight-color:transparent;
 }
 button::before{
   content:"";
@@ -258,6 +259,14 @@ to{
   padding-left:20px;
   padding-right:20px;
   }
+  @media(hover: none){
+  button:hover,
+  a:hover{
+    transform:none !important;
+    box-shadow:none !important;
+    background:inherit;
+  }
+}
 .nav-links{
   gap:10px;
   }
@@ -273,4 +282,8 @@ to{
 .scroll-box{
   display:none;
   }
+}
+button:focus,
+a:focus{
+  outline:none;
 }
